@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "510008204652",
+    "firebase_url": "https://ue-monitoring-app.firebaseio.com",
+    "project_id": "ue-monitoring-app",
+    "storage_bucket": "ue-monitoring-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510008204652:android:30cb1d45adb7cfe3ce6749",
+        "android_client_info": {
+          "package_name": "com.example.murtaza.firebaseproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510008204652-p2o2fdbauf70o76qkguohdhid2nfieov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNeooKzCmBOktVEdTtiJeP6olqFFnUvlo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510008204652-p2o2fdbauf70o76qkguohdhid2nfieov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
