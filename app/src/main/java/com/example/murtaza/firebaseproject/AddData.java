@@ -16,10 +16,6 @@ public class AddData {
     String batteryData;
     String InternetSpeed;
 
-    public AddData() {
-
-    }
-
     public AddData(String id, String date, String bsid_cell_id,
                    String Cell_Id, String latitude, String longititude, String Mobilemac, String LteData, String InternetSpeed,String batteryData) {
         this.id = id;
@@ -34,6 +30,8 @@ public class AddData {
 
         this.InternetSpeed = InternetSpeed;
     }
+
+
 
     public String getId() {
         return id;
@@ -100,5 +98,12 @@ public class AddData {
 
     public void setInternetSpeed(String internetSpeed) {
         InternetSpeed = internetSpeed;
+    }
+    public String getBatteryData() {
+        return batteryData;
+    }
+
+    public void setBatteryData(String batteryData) {
+        this.batteryData = batteryData;
     }
 }
