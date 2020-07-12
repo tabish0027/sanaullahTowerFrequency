@@ -13,6 +13,7 @@ public class AddData {
     String longititude;
     String Mobilemac;
     String LteData;
+    String batteryData;
     String InternetSpeed;
 
     public AddData() {
@@ -20,7 +21,7 @@ public class AddData {
     }
 
     public AddData(String id, String date, String bsid_cell_id,
-                   String Cell_Id, String latitude, String longititude, String Mobilemac, String LteData, String InternetSpeed) {
+                   String Cell_Id, String latitude, String longititude, String Mobilemac, String LteData, String InternetSpeed,String batteryData) {
         this.id = id;
         this.date = date;
         this.bsid = bsid_cell_id;
@@ -29,6 +30,8 @@ public class AddData {
         this.longititude = longititude;
         this.Mobilemac = Mobilemac;
         this.LteData = LteData;
+        this.batteryData = batteryData;
+
         this.InternetSpeed = InternetSpeed;
     }
 

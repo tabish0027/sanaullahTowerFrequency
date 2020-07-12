@@ -320,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
         String batteryData  = BatteryLevel.getText().toString().trim();
         String internetspeed = internetSpeed.getText().toString().trim();
         String id = myRef.push().getKey();
-         AddData addData = new AddData(id, date, BaseStationId, Cell_ID, Lat, Long,Mobilemac,LteData,internetspeed);
+         AddData addData = new AddData(id, date, BaseStationId, Cell_ID, Lat, Long,Mobilemac,LteData,internetspeed,batteryData);
          myRef.child("Users").child(id).setValue(addData);
 
     }
