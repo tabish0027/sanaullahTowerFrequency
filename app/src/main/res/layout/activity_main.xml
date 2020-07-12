@@ -113,6 +113,20 @@
             android:layout_centerInParent="true"
             android:textSize="17sp" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/BatteryLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Devic Id"
+            android:layout_marginTop="15dp"
+            android:layout_centerInParent="true"
+            android:textSize="17sp" />
+    </LinearLayout>
     <!--<LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

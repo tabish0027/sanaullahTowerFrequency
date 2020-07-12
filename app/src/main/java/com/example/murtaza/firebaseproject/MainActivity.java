@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
+import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
     private SignalStrength mSignalStrength;
     private boolean mDone = false;
-    private TextView mText = null;
+    private TextView mText,BatteryLevel = null;
     private String mTextStr;
     private TelephonyManager mManager;
 
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         lat = (TextView) findViewById(R.id.latitude_textview) ;
         longit = (TextView) findViewById(R.id.longitude_textview);
         mobileMac = (TextView) findViewById(R.id.MacAddres);
+        BatteryLevel = (TextView)findViewById(R.id.BatteryLevel);
 
         //LTE Services
         mManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
@@ -88,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
         else{
             tv.setText("Cannot get the base station information.");
         }
+        BatteryManager bm = (BatteryManager)getSystemService(BATTERY_SERVICE);
+        int batLevel = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY);
+        BatteryLevel.setText("Battery Level : "+Integer.toString(batLevel));
         //Time and date
         calander = Calendar.getInstance();
         simpledateformat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
@@ -177,6 +182,9 @@ public class MainActivity extends AppCompatActivity {
         else{
             tv.setText("Cannot get the base station information.");
         }
+        BatteryManager bm = (BatteryManager)getSystemService(BATTERY_SERVICE);
+        int batLevel = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY);
+        BatteryLevel.setText("Battery Level : "+Integer.toString(batLevel));
         //Time and date
         calander = Calendar.getInstance();
         simpledateformat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
@@ -309,6 +317,7 @@ public class MainActivity extends AppCompatActivity {
         String Cell_ID = cell_id.getText().toString().trim();
         String Mobilemac = mobileMac.getText().toString().trim();
         String LteData  = mText.getText().toString().trim();
+        String batteryData  = BatteryLevel.getText().toString().trim();
         String internetspeed = internetSpeed.getText().toString().trim();
         String id = myRef.push().getKey();
          AddData addData = new AddData(id, date, BaseStationId, Cell_ID, Lat, Long,Mobilemac,LteData,internetspeed);
